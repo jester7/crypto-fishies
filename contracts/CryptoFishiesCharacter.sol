@@ -2,6 +2,14 @@
 pragma solidity ^0.8.0;
 
 contract CryptoFishiesCharacter {
+
+    struct Action {
+        string name;
+        int24 hpChange;
+        uint8 successRate;
+        uint8 evadeRate;
+    }
+
     struct CharacterAttributes {
         uint256 characterIndex;
         string name;
@@ -9,6 +17,7 @@ contract CryptoFishiesCharacter {
         uint256 hp;
         uint256 maxHp;
         uint256 attackDamage;
+        Action[] actions;
     }
 
     CharacterAttributes[] defaultCharacters;

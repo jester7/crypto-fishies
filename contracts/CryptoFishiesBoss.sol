@@ -8,7 +8,7 @@ import "./CryptoFishiesCharacter.sol";
 contract CryptoFishiesBoss is CryptoFishiesCharacter {
     
     event AttackComplete(uint newBossHp, uint newPlayerHp);
-
+    event CharacterDied();
     
     struct BigBoss {
         string name;
@@ -16,6 +16,7 @@ contract CryptoFishiesBoss is CryptoFishiesCharacter {
         uint256 hp;
         uint256 maxHp;
         uint256 attackDamage;
+        Action[] actions;
     }
 
     BigBoss public bigBoss;
